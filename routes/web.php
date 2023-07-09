@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Tb_userController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\userController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +47,4 @@ Route::get('/katmenu', function () {
     return view('katmenu');
 });
 
-
+Route::get('/user',[userController::class,'show'] );
