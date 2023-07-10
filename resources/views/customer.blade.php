@@ -263,25 +263,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+                            @foreach ($customer as $item)
                                 <tr>
-                                    <th scope="row"></th>
-                                    <td>nama</td>
-                                    <td>username</td>
-                                    <td>alamat</td>
-                                    <td>JK</td>
-                                    <td>No HP</td>
+                                    <th scope="row">{{$item->id_pelanggan}}</th>
+                                    <td>{{$item->nama}}</td>
+                                    <td>{{$item->username}}</td>
+                                    <td>{{$item->alamat}}</td>
+                                    <td>{{$item->jk}}</td>
+                                    <td>{{$item->nohp}}</td>
                                     <td class="d-flex">
                                         <button class="btn btn-info btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalView>"><i class="bi bi-eye"></i></button>
                                         
                                             <button class="btn btn-warning btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalEdit>"><i class="bi bi-pencil-square"></i></button>
                                             <button class="btn btn-danger btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalDelete"><i class="bi bi-trash3"></i></button>
                                     </td>
-                                <?php ?>
                                 </tr>
-                            <?php
-                            
-                            ?>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

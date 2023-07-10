@@ -47,14 +47,14 @@
                                                     : 'link-dark'; ?>" href="katmenu">
                             <i class="bi bi-tags"></i> Kategori Barang</a>
                     </li>
-                    <?php ?>
+                
                         
                             <li class="nav-item">
                                 <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'user') ? 'active link-light'
                                                             : 'link-dark'; ?>" href="user">
                                     <i class="bi bi-person-circle"></i> User</a>
                             </li>
-                        <?php  ?>
+                        
                     </ul>
                 </div>
             </div>

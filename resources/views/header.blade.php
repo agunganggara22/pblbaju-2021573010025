@@ -1,13 +1,13 @@
 <nav class="navbar navbar-expand navbar-dark bg-primary sticky-top">
             <div class="container-lg">
-                <a class="navbar-brand" href=".">
-                    <i href="header.php" class="bi bi-shop"> Adinda Collection</i>
+                <a class="navbar-brand" href="index">
+                    <i href="index" class="bi bi-shop"> Adinda Collection</i>
                     <div class="collapse navbar-collapse d-flex justify-content-end me-5" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-person-circle">
-                                    <?php echo $hasil['username']; ?>
+                                    
                                 </a></i>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#ModalUbahPassword">
@@ -40,7 +40,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="form-floating mb-3">
-                                        <input disabled type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required name="username" value="<?php echo $_SESSION['username_decafe'] ?>">
+                                        <input disabled type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required name="username" value="">
                                         <label for="floatingInput">Username</label>
                                         <div class="invalid-feedback">
                                             Masukkan username
@@ -103,7 +103,7 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-floating mb-3">
-                                        <input disabled type="text" class="form-control" id="floatingInput" placeholder="your name" name="nama" value="<?php echo $hasil['nama'] ?>">
+                                        <input disabled type="text" class="form-control" id="floatingInput" placeholder="your name" name="nama" value="">
                                         <label for="floatingInput">Nama</label>
                                         <div class="invalid-feedback">
                                             Nama
@@ -112,7 +112,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="username" value="<?php echo $hasil['username'] ?>">
+                                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="username" value="">
                                         <label for="floatingInput">Username</label>
                                         <div class="invalid-feedback">
                                             username
@@ -123,17 +123,8 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="form-floating mb-3">
-                                        <select disabled name="level" class="form-select" aria-label="default select example" id="" value="<?php echo $hasil['level'] ?>">
-                                            <?php
-                                            $data = array("owner/admin", "karyawan", "pelanggan");
-                                            foreach ($data as $key => $value) {
-                                                if ($row['level'] == $key + 1) {
-                                                    echo "<option selected value='$key'>$value</option>";
-                                                } else {
-                                                    echo "<option value='$key'>$value</option>";
-                                                }
-                                            }
-                                            ?>
+                                        <select disabled name="level" class="form-select" aria-label="default select example" id="" value="">
+                                           
                                         </select>
                                         <label for="floatingInput">Level User</label>
                                         <div class="invalid-feedback">
@@ -143,14 +134,14 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="form-floating mb-3">
-                                        <input disabled type="number" class="form-control" id="floatingInput" placeholder="08xxxx" name="nohp" value="<?php echo $hasil['nohp'] ?>">
+                                        <input disabled type="number" class="form-control" id="floatingInput" placeholder="08xxxx" name="nohp" value="">
                                         <label for="floatingInput">No Hp</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-floating">
-                                <textarea disabled class="form-control" id="" style="height: 100px;" name="alamat"><?php echo $hasil['alamat'] ?></textarea>
+                                <textarea disabled class="form-control" id="" style="height: 100px;" name="alamat"></textarea>
                                 <label for="floatingInput">Alamat</label>
                             </div>
                             <div class="modal-footer">

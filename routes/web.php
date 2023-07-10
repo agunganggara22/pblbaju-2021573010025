@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\Tb_userController;
+use App\Http\Controllers\daftarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\katbarangController;
+use App\Http\Controllers\customerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +49,14 @@ Route::get('/katmenu', function () {
     return view('katmenu');
 });
 
+Route::get('/order', function () {
+    return view('order');
+});
+
 Route::get('/user',[userController::class,'show'] );
+
+Route::get('/katmenu',[katbarangController::class,'show'] );
+
+Route::get('/customer',[customerController::class,'show'] );
+
+Route::get('/menu',[daftarController::class,'show'] );

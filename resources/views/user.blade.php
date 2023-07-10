@@ -98,6 +98,27 @@
                     </div>
                 </div>
             </div>
+            <script>
+                $(document).ready(function() {
+                  $('[data-toggle="modal"]').click(function() {
+                    var targetModal = $(this).data('target');
+                    $(targetModal).show();
+                  });
+                  
+                  $('.modal').click(function() {
+                    $(this).hide();
+                  });
+                  
+                  $('.modal-dialog').click(function(e) {
+                    e.stopPropagation();
+                  });
+                  
+                  $('[data-dismiss="modal"]').click(function() {
+                    $('.modal').hide();
+                  });
+                });
+              </script>
+              
             <!-- Akhir Modal Tambah User Baru-->
             
                 <!-- Modal View-->
@@ -314,9 +335,17 @@
                         </tbody>
                     </table>
                 </div>
-            <?php
-            
-            ?>
+            </div><!-- Footer -->
+            <footer class="py-4">
+               <div class="container-fluid fixed-bottom">
+                   <div class="card text-center border-0 bg-primary">
+                       <i class="text-center text-white"> (C)CopyRight 2022-2023 - Adinda Collection
+                           <a href="https://www.instagram.com/adinda.collection_02/" target="_blank"><img src="img/ig.png" width="40px" height="40px" align="right"></a>
+                           <a href="https://www.facebook.com" target="_blank"><img src="img/f.png" width="40px" height="40px" align="right"></a>
+                           <a href="whatsapp://send?text=Hello&phone=+6285277722283" target="_blank"><img src="img/wa.png" width="40px" height="40px" align="right"></a>
+                       </i>
+                   </div>
+                   <!-- End Footer -->
         </div>
     </div>
 </div>

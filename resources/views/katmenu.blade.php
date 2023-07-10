@@ -154,19 +154,20 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($katbarang as $item)
                         
                                 <tr>
-                                    <th scope="row"></th>
-                                    <td></td>
-                                    <td></td>
+                                    <th scope="row">{{$item->id_kat_menu}}</th>
+                                    <td>{{$item->jenis_menu}}</td>
+                                    <td>{{$item->kategori_menu}}</td>
                                     <td class="d-flex">
                                         <button class="btn btn-warning btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalEdit"><i class="bi bi-pencil-square"></i></button>
                                         <button class="btn btn-danger btn-sm me-1" data-bs-toggle="modal" data-bs-target="#ModalDelete"><i class="bi bi-trash3"></i></button>
                                     </td>
                                 </tr>
-                            <?php
                             
-                            ?>
+                            @endforeach
+                            
                         </tbody>
                     </table>
                 </div>
